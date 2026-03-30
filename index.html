@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ísis Duarte | Portfólio</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    color: #e2e8f0;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: rgba(2,6,23,0.8);
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+}
+
+header h1 {
+    color: #38bdf8;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #e2e8f0;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+/* HERO */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 45px;
+}
+
+.hero span {
+    color: #38bdf8;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 8px;
+    color: #020617;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    background: #0ea5e9;
+}
+
+/* SECTIONS */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #020617;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 0 20px rgba(56,189,248,0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+    margin-top: 40px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Ísis.dev</h1>
+    <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h2>Oi, eu sou <span>Ísis Duarte</span> 👩‍💻</h2>
+    <p>Construindo meu caminho na tecnologia</p>
+    <button class="btn" onclick="scrollContato()">Fale comigo</button>
+</section>
+
+<section id="sobre" class="section">
+    <h2>Sobre mim</h2>
+    <p>Estudante do CEFET-MG focada em redes e desenvolvimento web. Buscando oportunidades e projetos para crescer na área de TI.</p>
+</section>
+
+<section id="servicos" class="section">
+    <h2>Serviços</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Criação de Sites</h3>
+            <p>Sites modernos para pequenos negócios e portfólios.</p>
+        </div>
+
+        <div class="card">
+            <h3>Formatação de PCs</h3>
+            <p>Computador rápido, limpo e otimizado.</p>
+        </div>
+
+        <div class="card">
+            <h3>Suporte Técnico</h3>
+            <p>Ajuda com internet, Wi-Fi e problemas comuns.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contato" class="section">
+    <h2>Contato</h2>
+    <p>Fale comigo direto no WhatsApp:</p>
+    <button class="btn" onclick="whatsapp()">Chamar no WhatsApp</button>
+</section>
+
+<footer>
+    <p>© 2026 - Ísis Duarte</p>
+</footer>
+
+<script>
+function scrollContato() {
+    document.getElementById("contato").scrollIntoView({ behavior: "smooth" });
+}
+
+function whatsapp() {
+    window.open("https://wa.me/5531999999999"); // troca pelo seu número
+}
+</script>
+
+</body>
+</html>
